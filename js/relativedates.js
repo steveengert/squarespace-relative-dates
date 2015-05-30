@@ -27,28 +27,25 @@ $("time").each(function() {
   var daysDiff = Math.floor((today - postDate)/1000/60/60/24);
 
   if(daysDiff < 0) { // impossible dates
-  $(this).html("The future!");
+    $(this).html("The future!");
   } else if(daysDiff == 0) { // when the dates are the same
-      $(this).html("Today");
-  } else if (daysDiff == 1) { // when the post's date is one day behind today
-  $(this).html("Yesterday");
-  } else { // when the post's date is more than one day ago
-    if ((daysDiff >= 1) && (daysDiff < 7)) { // within a week
-    $(this).html(daysDiff + " days");
-    } else if ((daysDiff >= 7) && (daysDiff < 14)) { // between one–two weeks
-    $(this).html("1 week");
-    } else if ((daysDiff >= 14) && (daysDiff < aMonth)) { // multiple weeks
-    $(this).html(Math.floor(daysDiff/7) + " weeks");
-    } else if ((daysDiff >= aMonth) && (daysDiff < (aMonth*2))) { // between one–two months
-    $(this).html("1 month");
-    } else if ((daysDiff >= (aMonth*2)) && (daysDiff < aYear)) { // multiple months
-    $(this).html(Math.floor(daysDiff/(aMonth)) + " months");
-    } else if ((daysDiff >= aYear) && (daysDiff < aYear*2)) { // between one–two years
-    $(this).html("1 year");
-    } else if (daysDiff >= aYear*2) { // multiple years
-    $(this).html(Math.floor(daysDiff/aYear) + " years");
-    }
-    $(this).append(" ago");
-  }
+    $(this).html("Today");
+  } else if (daysDiff == 1) { // when the post's date is one day ago
+    $(this).html("Yesterday");
+  } else if ((daysDiff >= 1) && (daysDiff < 7)) { // within a week
+    $(this).html(daysDiff + " days ago");
+  } else if ((daysDiff >= 7) && (daysDiff < 14)) { // between one–two weeks
+    $(this).html("last week");
+  } else if ((daysDiff >= 14) && (daysDiff < aMonth)) { // multiple weeks
+    $(this).html(Math.floor(daysDiff/7) + " weeks ago");
+  } else if ((daysDiff >= aMonth) && (daysDiff < (aMonth*2))) { // between one–two months
+    $(this).html("last month");
+  } else if ((daysDiff >= (aMonth*2)) && (daysDiff < aYear)) { // multiple months
+    $(this).html(Math.floor(daysDiff/(aMonth)) + " months ago");
+  } else if ((daysDiff >= aYear) && (daysDiff < aYear*2)) { // between one–two years
+    $(this).html("last year");
+  } else if (daysDiff >= aYear*2) { // multiple years
+    $(this).html(Math.floor(daysDiff/aYear) + " years ago");
+  } 
 });
 }

@@ -13,9 +13,9 @@ A date that hasn't happened yet  | *The future!*
 Same day as today  | *Today*
 One day ago  | *Yesterday*
 2–6 days ago | *n days ago*
-7–13 days ago | *1 week ago*
+7–13 days ago | *last week*
 14–29 days ago | *n weeks ago*
-30–59 days ago | *1 month ago*
+30–59 days ago | *last month*
 60–364 days ago | *n months ago*
-365–729 days ago | *1 year ago*
+365–729 days ago | *last year*
 730+ days ago | *n years ago*
